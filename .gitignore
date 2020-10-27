@@ -5,10 +5,8 @@ _site
 
 node_modules
 
-/dist
+#/dist
 
-/locale
-
-/index.*
-
-/scss
+#/locale
+#/index.*
+#/scss

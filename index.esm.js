@@ -3557,6 +3557,7 @@ var DatetimePanel = {
     }
   },
   render: function render() {
+    var h = arguments[0];
     var calendarProps = {
       props: _objectSpread2({}, pick(this, Object.keys(__vue_component__$5.props)), {
         type: 'date',
@@ -3575,23 +3576,21 @@ var DatetimePanel = {
         select: this.emitDate,
         'title-click': this.closeTimePanel
       }
-    }; // const badge =  {
-    //     // return <template slot="badge" >
-    //     //     {this.$scopedSlots.badge(p)}
-    //     // </template>
-    //     return createElement('div', [
-    //         this.$scopedSlots.badge({
-    //           row: this.row
-    //         })
-    //       ])
-    // }
-
+    };
     var prefixClass = this.prefixClass;
-    return createElement('CalendarPanel', _objectSpread2({}, calendarProps), [createElement('slot', {
-      props: {
-        row: this.row
+    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
+      "slot": "badge"
+    }, [h("slot", helper([{}, {
+      "props": function props(row) {
+        return row;
       }
-    }, createElement('v-badge', this.$slots.badge))]);
+    }, {
+      "attrs": {
+        "name": 'badge'
+      }
+    }]))])]), this.timeVisible && h(__vue_component__$9, helper([{
+      "class": "".concat(prefixClass, "-calendar-time")
+    }, timeProps]))]);
   }
 };
 

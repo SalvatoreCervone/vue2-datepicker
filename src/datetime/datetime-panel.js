@@ -87,6 +87,7 @@ export default {
         const { prefixClass } = this;
 
         return (<div>
+            tttt
             <CalendarPanel {...calendarProps }/> 
             {this.timeVisible && <TimePanel class = { `${prefixClass}-calendar-time` } {...timeProps }/>} 
             </div >

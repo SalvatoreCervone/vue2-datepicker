@@ -23,7 +23,9 @@
           :class="getCellClasses(cell.day)"
           :title="getCellTitle(cell.day)"
         >
-          <div>{{ cell.text }} <v-badge>1</v-badge></div>
+          <div>
+            {{ cell.text }} <slot name="badge">{{ cell.badgeText }}</slot>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -82,6 +84,12 @@ export default {
         return [];
       },
     },
+    badgeCalendar: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
   },
   computed: {
     firstDayOfWeek() {
@@ -97,7 +105,6 @@ export default {
       const year = this.calendarYear;
       const month = this.calendarMonth;
 
-      console.log('mese', month);
       // change to the last day of the last month
       const calendar = createDate(year, month, 0);
       const lastDayInLastMonth = calendar.getDate();
@@ -112,7 +119,10 @@ export default {
       calendar.setMonth(month + 1, 0);
       const lastDayInCurrentMonth = calendar.getDate();
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
-        arr.push({ day: i, text: i });
+        let badgeText = this.badgeCalendar.filter(r => {
+          return r.data == year + '-' + month + '-' + i;
+        });
+        arr.push({ day: i, text: i, badgeText });
       }
 
       const lastMonthLength = lastDayInLastMonth - firstDayInLastMonth + 1;

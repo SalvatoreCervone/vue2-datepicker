@@ -2343,17 +2343,10 @@ var __vue_render__$5 = function __vue_render__() {
     },
     on: {
       "select": _vm.handleSelectDate
-    },
-    scopedSlots: _vm._u([{
-      key: "badge",
-      fn: function fn(ref) {
-        var row = ref.row;
-        return [_vm._t("badge", null, {
-          "row": row
-        })];
-      }
-    }], null, true)
-  }) : _vm._e()], 1)]);
+    }
+  }, [_vm._t("badge", null, {
+    "row": _vm.row
+  })], 2) : _vm._e()], 1)]);
 };
 
 var __vue_staticRenderFns__$5 = [];

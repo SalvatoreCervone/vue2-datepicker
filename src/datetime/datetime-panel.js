@@ -91,12 +91,13 @@ export default {
 
         return (<div>   
                         {
-  this.$slots
+  this.$scopedSlots
  
 }
 {
-  this.$slots.badge 
-}<slot name="badge"></slot>
+  this.$scopedSlots.badge 
+}
+<slot name="badge"></slot>
                <template slot="badge">
 
                   </template>               

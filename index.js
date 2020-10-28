@@ -4044,7 +4044,7 @@
         }
       };
       var prefixClass = this.prefixClass;
-      return h("div", [this.$slots, this.$slots.badge, h("slot", {
+      return h("div", [this.$scopedSlots, this.$scopedSlots.badge, h("slot", {
         "attrs": {
           "name": "badge"
         }

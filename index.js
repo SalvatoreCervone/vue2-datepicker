@@ -2098,7 +2098,7 @@
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
           }
-        }, [_c('div', [_vm._v(_vm._s(cell.text) + " 1"), _vm._t("badge", null, {
+        }, [_c('div', [_vm._v(_vm._s(cell.text) + " "), _vm._t("badge", null, {
           "row": row
         })], 2)]);
       })], 2);
@@ -4044,7 +4044,7 @@
         }
       };
       var prefixClass = this.prefixClass;
-      return h("div", [this.$slots.default, this.$slots.badge, h("slot", {
+      return h("div", [this.$slots, this.$slots.badge, h("slot", {
         "attrs": {
           "name": "badge"
         }

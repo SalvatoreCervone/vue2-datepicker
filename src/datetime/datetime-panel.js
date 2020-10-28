@@ -91,7 +91,7 @@ export default {
 
         return (<div>   
                         {
-  this.$slots.default
+  this.$slots
  
 }
 {

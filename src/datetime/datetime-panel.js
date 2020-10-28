@@ -86,14 +86,35 @@ export default {
         };
 
 
-        const badge = (p) => {
-            return <template slot="badge" >
-                {this.$scopedSlots.badge(p)}
-            </template>
-        }
+        // const badge =  {
+        //     // return <template slot="badge" >
+        //     //     {this.$scopedSlots.badge(p)}
+        //     // </template>
+        //     return createElement('div', [
+        //         this.$scopedSlots.badge({
+        //           row: this.row
+        //         })
+        //       ])
+        // }
 
         const { prefixClass } = this;
 
+
+
+        return createElement(
+                'CalendarPanel', 
+                 {...calendarProps}
+                , 
+                    [
+                        createElement(
+                            'slot',{
+                            props:{
+                                row:this.row
+                            }
+                        } ,createElement('v-badge',this.$slots.badge)),
+                    
+                    ]
+          )
         return (<div>
             <CalendarPanel {...calendarProps} >
                 

@@ -4285,7 +4285,7 @@ var __vue_render__$a = function __vue_render__() {
       key: "badge",
       fn: function fn(ref) {
         var row = ref.row;
-        return [_vm._t("badge", null, {
+        return [_vm._v("\n              " + _vm._s(row) + "\n              "), _vm._t("badge", null, {
           "row": row
         })];
       }

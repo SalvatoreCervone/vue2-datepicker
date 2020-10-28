@@ -1,10 +1,12 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('vue2-datepicker')) :
 	typeof define === 'function' && define.amd ? define(['vue2-datepicker'], factory) :
-	(global = global || self, (global.DatePicker = global.DatePicker || {}, global.DatePicker.lang = global.DatePicker.lang || {}, global.DatePicker.lang.nb = factory(global.DatePicker)));
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, (global.DatePicker = global.DatePicker || {}, global.DatePicker.lang = global.DatePicker.lang || {}, global.DatePicker.lang.nb = factory(global.DatePicker)));
 }(this, (function (DatePicker) { 'use strict';
 
-	DatePicker = DatePicker && DatePicker.hasOwnProperty('default') ? DatePicker['default'] : DatePicker;
+	function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+	var DatePicker__default = /*#__PURE__*/_interopDefaultLegacy(DatePicker);
 
 	function unwrapExports (x) {
 		return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -42,7 +44,7 @@
 	  monthFormat: 'MMM',
 	  monthBeforeYear: true
 	};
-	DatePicker.locale('nb', lang);
+	DatePicker__default['default'].locale('nb', lang);
 
 	return lang;
 

@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.DatePicker = factory());
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.DatePicker = factory());
 }(this, (function () { 'use strict';
 
   function _typeof(obj) {
@@ -2098,7 +2098,7 @@
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
           }
-        }, [_c('div', [_vm._v(_vm._s(cell.text))])]);
+        }, [_c('div', [_vm._v(_vm._s(cell.text) + " t")])]);
       })], 2);
     }), 0)]);
   };

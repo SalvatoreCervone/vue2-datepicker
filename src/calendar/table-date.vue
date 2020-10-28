@@ -23,7 +23,7 @@
           :class="getCellClasses(cell.day)"
           :title="getCellTitle(cell.day)"
         >
-          <div>{{ cell.text }}</div>
+          <div>{{ cell.text }} t</div>
         </td>
       </tr>
     </tbody>

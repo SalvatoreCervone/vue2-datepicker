@@ -17,7 +17,7 @@ export default {
             type: Boolean,
             default: undefined,
         },
-       
+
     },
     data() {
         return {
@@ -85,21 +85,21 @@ export default {
             },
         };
 
-        
+
 
         const { prefixClass } = this;
 
-        return (<div>   
-              
-                            
-            <CalendarPanel {...calendarProps } >
-                <template slot="badge">
-                {this.$slots.badge}
+        return (<div>
+
+
+            <CalendarPanel {...calendarProps} >
+                <template slot="badge" {...slotProps}>
+                    {this.$scopedSlots.badge(slotProps)}
                 </template>
-                    
-                </CalendarPanel> 
-            {this.timeVisible && <TimePanel class = { `${prefixClass}-calendar-time` } {...timeProps }/>} 
-            </div >
+
+            </CalendarPanel>
+            {this.timeVisible && <TimePanel class={`${prefixClass}-calendar-time`} {...timeProps} />}
+        </div >
         );
     },
 };

@@ -3580,15 +3580,9 @@ var DatetimePanel = {
     var prefixClass = this.prefixClass;
     return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
       "slot": "badge"
-    }, [h("slot", helper([{}, {
-      "props": function props(row) {
-        return row;
-      }
-    }, {
-      "attrs": {
-        "name": 'badge'
-      }
-    }]))])]), this.timeVisible && h(__vue_component__$9, helper([{
+    }, [this.$scopedSlot.badge({
+      row: ['ecco']
+    })])]), this.timeVisible && h(__vue_component__$9, helper([{
       "class": "".concat(prefixClass, "-calendar-time")
     }, timeProps]))]);
   }

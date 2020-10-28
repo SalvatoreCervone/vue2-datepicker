@@ -97,7 +97,7 @@ export default {
         return (<div>
             <CalendarPanel {...calendarProps} >
                 
-                {badge}
+                <badge/>
 
             </CalendarPanel>
             {this.timeVisible && <TimePanel class={`${prefixClass}-calendar-time`} {...timeProps} />}

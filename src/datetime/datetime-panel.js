@@ -89,19 +89,20 @@ export default {
 
         const { prefixClass } = this;
 
-        return (<div>            
-            <CalendarPanel {...calendarProps }>    
-          
-            {
+        return (<div>   
+                        {
   this.$slots.default
  
 }
 {
   this.$slots.badge 
-}
-              <template slot="badge">
+}<slot name="badge"></slot>
+               <template slot="badge">
 
-                  </template>         
+                  </template>               
+            <CalendarPanel {...calendarProps }>    
+          
+  
                 </CalendarPanel> 
             {this.timeVisible && <TimePanel class = { `${prefixClass}-calendar-time` } {...timeProps }/>} 
             </div >

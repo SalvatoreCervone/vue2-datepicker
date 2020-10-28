@@ -2008,8 +2008,7 @@
         for (var _i = 1; _i <= lastDayInCurrentMonth; _i++) {
           arr.push({
             day: _i,
-            text: _i,
-            badgeText: badgeText
+            text: _i
           });
         }
 

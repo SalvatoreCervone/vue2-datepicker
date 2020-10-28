@@ -111,7 +111,7 @@ export default {
       calendar.setMonth(month + 1, 0);
       const lastDayInCurrentMonth = calendar.getDate();
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
-        arr.push({ day: i, text: i, badgeText });
+        arr.push({ day: i, text: i });
       }
 
       const lastMonthLength = lastDayInLastMonth - firstDayInLastMonth + 1;

@@ -3578,9 +3578,11 @@ var DatetimePanel = {
       }
     };
     var prefixClass = this.prefixClass;
-    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", helper([{
+    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
       "slot": "badge"
-    }, slotProps]), [this.$scopedSlots.badge(slotProps)])]), this.timeVisible && h(__vue_component__$9, helper([{
+    }, [this.$scopedSlots.badge({
+      row: this.row
+    })])]), this.timeVisible && h(__vue_component__$9, helper([{
       "class": "".concat(prefixClass, "-calendar-time")
     }, timeProps]))]);
   }

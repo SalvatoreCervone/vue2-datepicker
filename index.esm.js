@@ -4182,7 +4182,7 @@ var __vue_render__$a = function __vue_render__() {
 
   return _c('div', {
     class: (_obj = {}, _obj[_vm.prefixClass + "-datepicker"] = true, _obj[_vm.prefixClass + "-datepicker-range"] = _vm.range, _obj[_vm.prefixClass + "-datepicker-inline"] = _vm.inline, _obj.disabled = _vm.disabled, _obj)
-  }, [!_vm.inline ? _c('div', {
+  }, [_vm._t("badge"), _vm._v(" "), !_vm.inline ? _c('div', {
     class: _vm.prefixClass + "-input-wrapper",
     on: {
       "mousedown": _vm.openPopup
@@ -4222,7 +4222,7 @@ var __vue_render__$a = function __vue_render__() {
       input: _vm.handleInputInput,
       change: _vm.handleInputChange
     }
-  }), _vm._v(" "), _vm._t("badge"), _vm._v(" "), _vm.showClearIcon ? _c('i', {
+  }), _vm._v(" "), _vm.showClearIcon ? _c('i', {
     class: _vm.prefixClass + "-icon-clear",
     on: {
       "mousedown": function mousedown($event) {
@@ -4244,7 +4244,7 @@ var __vue_render__$a = function __vue_render__() {
     on: {
       "clickoutside": _vm.handleClickOutSide
     }
-  }, [_vm.hasSlot('sidebar') || _vm.shortcuts.length ? _c('div', {
+  }, [_vm._t("badge"), _vm._v(" "), _vm.hasSlot('sidebar') || _vm.shortcuts.length ? _c('div', {
     class: _vm.prefixClass + "-datepicker-sidebar"
   }, [_vm._t("sidebar", null, {
     "value": _vm.currentValue,
@@ -4293,7 +4293,7 @@ var __vue_render__$a = function __vue_render__() {
     on: {
       "click": _vm.handleConfirmDate
     }
-  }, [_vm._v("\n          " + _vm._s(_vm.confirmText) + "\n        ")]) : _vm._e()], 2) : _vm._e()])])], 1);
+  }, [_vm._v("\n          " + _vm._s(_vm.confirmText) + "\n        ")]) : _vm._e()], 2) : _vm._e()])], 2)], 2);
 };
 
 var __vue_staticRenderFns__$a = [];

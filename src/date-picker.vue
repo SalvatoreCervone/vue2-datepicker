@@ -7,6 +7,7 @@
       disabled: disabled,
     }"
   >
+    <slot name="badge"></slot>
     <div v-if="!inline" :class="`${prefixClass}-input-wrapper`" @mousedown="openPopup">
       <slot
         name="input"
@@ -51,7 +52,7 @@
           }"
         />
       </slot>
-      <slot name="badge"></slot>
+
       <i v-if="showClearIcon" :class="`${prefixClass}-icon-clear`" @mousedown.stop="handleClear">
         <slot name="icon-clear">
           <icon-close></icon-close>
@@ -72,6 +73,7 @@
       :append-to-body="appendToBody"
       @clickoutside="handleClickOutSide"
     >
+      <slot name="badge"></slot>
       <div
         v-if="hasSlot('sidebar') || shortcuts.length"
         :class="`${prefixClass}-datepicker-sidebar`"

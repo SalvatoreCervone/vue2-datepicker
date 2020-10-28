@@ -91,7 +91,11 @@
         :get-cell-classes="getDateClasses"
         :get-row-classes="getWeekState"
         @select="handleSelectDate"
-      ></table-date>
+      >
+        <template v-slot:badge="{ row }">
+          <slot :row="row" name="badge"></slot>
+        </template>
+      </table-date>
     </div>
   </div>
 </template>

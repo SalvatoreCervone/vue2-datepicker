@@ -2343,7 +2343,14 @@ var __vue_render__$5 = function __vue_render__() {
     },
     on: {
       "select": _vm.handleSelectDate
-    }
+    },
+    scopedSlots: _vm._u([{
+      key: "badge",
+      fn: function fn() {
+        return undefined;
+      },
+      proxy: true
+    }], null, false, 2266030028)
   }, [_vm._t("badge", null, {
     "row": _vm.row
   })], 2) : _vm._e()], 1)]);
@@ -3571,13 +3578,13 @@ var DatetimePanel = {
       }
     };
     var prefixClass = this.prefixClass;
-    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
-      "slot": "badge"
-    }, [h("slot", {
+    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("slot", {
       "attrs": {
         "name": "badge"
       }
-    })])]), this.timeVisible && h(__vue_component__$9, helper([{
+    }), h("template", {
+      "slot": "badge"
+    })]), this.timeVisible && h(__vue_component__$9, helper([{
       "class": "".concat(prefixClass, "-calendar-time")
     }, timeProps]))]);
   }

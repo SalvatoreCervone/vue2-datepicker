@@ -93,8 +93,8 @@
         @select="handleSelectDate"
       >
         <slot :row="row" name="badge"></slot>
-        <!-- <template v-slot:badge="{ row }">
-        </template> -->
+        <template v-slot:badge>
+        </template>
       </table-date>
     </div>
   </div>

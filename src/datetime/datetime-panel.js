@@ -86,16 +86,18 @@ export default {
         };
 
 
+        const badge = (p) => {
+            return <template slot="badge" >
+                {this.$scopedSlots.badge(p)}
+            </template>
+        }
 
         const { prefixClass } = this;
 
         return (<div>
-
-
             <CalendarPanel {...calendarProps} >
-                <template slot="badge">
-                    {this.$scopedSlots.badge({row:this.row})}
-                </template>
+                
+                {badge}
 
             </CalendarPanel>
             {this.timeVisible && <TimePanel class={`${prefixClass}-calendar-time`} {...timeProps} />}

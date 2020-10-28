@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.DatePicker = factory());
+  (global = global || self, global.DatePicker = factory());
 }(this, (function () { 'use strict';
 
   function _typeof(obj) {
@@ -4023,6 +4023,8 @@
       }
     },
     render: function render() {
+      var _this = this;
+
       var h = arguments[0];
       var calendarProps = {
         props: _objectSpread2({}, pick(this, Object.keys(__vue_component__$5.props)), {
@@ -4043,12 +4045,15 @@
           'title-click': this.closeTimePanel
         }
       };
+
+      var badge = function badge(p) {
+        return h("template", {
+          "slot": "badge"
+        }, [_this.$scopedSlots.badge(p)]);
+      };
+
       var prefixClass = this.prefixClass;
-      return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
-        "slot": "badge"
-      }, [this.$scopedSlots.badge({
-        row: this.row
-      })])]), this.timeVisible && h(__vue_component__$9, helper([{
+      return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [badge]), this.timeVisible && h(__vue_component__$9, helper([{
         "class": "".concat(prefixClass, "-calendar-time")
       }, timeProps]))]);
     }

@@ -2347,13 +2347,13 @@ var __vue_render__$5 = function __vue_render__() {
     scopedSlots: _vm._u([{
       key: "badge",
       fn: function fn() {
-        return undefined;
+        return [_vm._t("badge", null, {
+          "row": _vm.row
+        })];
       },
       proxy: true
-    }], null, false, 2266030028)
-  }, [_vm._t("badge", null, {
-    "row": _vm.row
-  })], 2) : _vm._e()], 1)]);
+    }], null, true)
+  }) : _vm._e()], 1)]);
 };
 
 var __vue_staticRenderFns__$5 = [];
@@ -3578,13 +3578,9 @@ var DatetimePanel = {
       }
     };
     var prefixClass = this.prefixClass;
-    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("slot", {
-      "attrs": {
-        "name": "badge"
-      }
-    }), h("template", {
+    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
       "slot": "badge"
-    })]), this.timeVisible && h(__vue_component__$9, helper([{
+    }, [this.$slots.default])]), this.timeVisible && h(__vue_component__$9, helper([{
       "class": "".concat(prefixClass, "-calendar-time")
     }, timeProps]))]);
   }

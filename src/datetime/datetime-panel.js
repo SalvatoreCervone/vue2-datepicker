@@ -92,8 +92,12 @@ export default {
         return (<div>            
             <CalendarPanel {...calendarProps }>    
           
-          <slot name="badge"></slot>
-              <template slot="badge"></template>         
+
+              <template slot="badge">
+              {
+  this.$slots.default 
+}
+                  </template>         
                 </CalendarPanel> 
             {this.timeVisible && <TimePanel class = { `${prefixClass}-calendar-time` } {...timeProps }/>} 
             </div >

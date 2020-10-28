@@ -4047,7 +4047,7 @@
       return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
         "slot": "badge"
       }, [this.$scopedSlots.badge({
-        row: "ecco"
+        row: this.row
       })])]), this.timeVisible && h(__vue_component__$9, helper([{
         "class": "".concat(prefixClass, "-calendar-time")
       }, timeProps]))]);

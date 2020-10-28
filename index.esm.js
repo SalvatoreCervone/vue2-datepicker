@@ -1632,7 +1632,7 @@ var __vue_render__$2 = function __vue_render__() {
           "data-day": cell.day,
           "title": _vm.getCellTitle(cell.day)
         }
-      }, [_c('div', [_vm._v(_vm._s(cell.text) + " "), _vm._t("badge", null, {
+      }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "\n          " + _vm._s(row) + "\n          "), _vm._t("badge", null, {
         "row": row
       })], 2)]);
     })], 2);
@@ -2348,7 +2348,7 @@ var __vue_render__$5 = function __vue_render__() {
       key: "badge",
       fn: function fn(ref) {
         var row = ref.row;
-        return [_vm._t("badge", null, {
+        return [_vm._v("\n        " + _vm._s(row) + "\n        "), _vm._t("badge", null, {
           "row": row
         })];
       }

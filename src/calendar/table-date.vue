@@ -12,7 +12,6 @@
         :key="i"
         :class="[`${prefixClass}-date-row`, getRowClasses(row)]"
       >
-      
         <td v-if="showWeekNumber" :class="`${prefixClass}-week-number`">
           {{ getWeekNumber(row[0].day) }}
         </td>
@@ -24,7 +23,11 @@
           :class="getCellClasses(cell.day)"
           :title="getCellTitle(cell.day)"
         >
-          <div>{{ cell.text }} <slot :row="row" name="badge"></slot></div>
+          <div>
+            {{ cell.text }}
+            {{ row }}
+            <slot :row="row" name="badge"></slot>
+          </div>
         </td>
       </tr>
     </tbody>

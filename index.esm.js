@@ -1520,7 +1520,8 @@ var script = {
       var arr = [];
       var firstDayOfWeek = this.firstDayOfWeek;
       var year = this.calendarYear;
-      var month = this.calendarMonth; // change to the last day of the last month
+      var month = this.calendarMonth;
+      console.log('mese', month); // change to the last day of the last month
 
       var calendar = createDate(year, month, 0);
       var lastDayInLastMonth = calendar.getDate(); // getDay() 0 is Sunday, 1 is Monday

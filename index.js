@@ -4750,7 +4750,9 @@
       scopedSlots: _vm._u([{
         key: "badge",
         fn: function fn() {
-          return [_vm._t("badge")];
+          return [_vm._t("badge", null, {
+            "row": _vm.row
+          })];
         },
         proxy: true
       }], null, true)

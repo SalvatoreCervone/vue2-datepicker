@@ -90,18 +90,13 @@ export default {
         const { prefixClass } = this;
 
         return (<div>   
-                        {
-  this.$scopedSlots
- 
-}
-{
-  this.$scopedSlots.badge 
-}
-<slot name="badge"></slot>
-               <template slot="badge">
-
-                  </template>               
-            <CalendarPanel {...calendarProps }>    
+                              
+            <CalendarPanel {...calendarProps } scopedSlots={
+    {
+        default: function (props) {
+            return [<div>{props.text}</div>,<div>this is real body</div>]
+        }
+    }}>  
           
   
                 </CalendarPanel> 

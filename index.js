@@ -4044,13 +4044,13 @@
         }
       };
       var prefixClass = this.prefixClass;
-      return h("div", [this.$scopedSlots, this.$scopedSlots.badge, h("slot", {
-        "attrs": {
-          "name": "badge"
+      return h("div", [h(__vue_component__$5, helper([{}, calendarProps, {
+        "scopedSlots": {
+          default: function _default(props) {
+            return [h("div", [props.text]), h("div", ["this is real body"])];
+          }
         }
-      }), h("template", {
-        "slot": "badge"
-      }), h(__vue_component__$5, helper([{}, calendarProps])), this.timeVisible && h(__vue_component__$9, helper([{
+      }])), this.timeVisible && h(__vue_component__$9, helper([{
         "class": "".concat(prefixClass, "-calendar-time")
       }, timeProps]))]);
     }

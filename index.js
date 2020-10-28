@@ -4043,11 +4043,6 @@
           'title-click': this.closeTimePanel
         }
       };
-      var slotProps = {
-        props: {
-          row: row
-        }
-      };
       var prefixClass = this.prefixClass;
       return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("slot", {
         "attrs": {

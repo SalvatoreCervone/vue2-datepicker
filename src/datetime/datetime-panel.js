@@ -85,11 +85,7 @@ export default {
             },
         };
 
-        const slotProps={
-            props:{
-                row:row
-            }
-        }
+        
 
         const { prefixClass } = this;
 

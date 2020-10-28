@@ -2348,7 +2348,7 @@ var __vue_render__$5 = function __vue_render__() {
       key: "badge",
       fn: function fn(ref) {
         var row = ref.row;
-        return [_vm._v("\n        " + _vm._s(row) + "\n        "), _vm._t("badge", null, {
+        return [_vm._t("badge", null, {
           "row": row
         })];
       }
@@ -3579,8 +3579,11 @@ var DatetimePanel = {
     };
     var prefixClass = this.prefixClass;
     return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
-      "slot": "badge"
-    }, [this.$scopedSlots.badge({
+      "slot": "badge",
+      "attrs": {
+        "scope": "row"
+      }
+    }, [row, this.$scopedSlots.badge({
       row: this.data
     })])]), this.timeVisible && h(__vue_component__$9, helper([{
       "class": "".concat(prefixClass, "-calendar-time")

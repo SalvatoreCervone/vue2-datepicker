@@ -12,6 +12,7 @@
         :key="i"
         :class="[`${prefixClass}-date-row`, getRowClasses(row)]"
       >
+      
         <td v-if="showWeekNumber" :class="`${prefixClass}-week-number`">
           {{ getWeekNumber(row[0].day) }}
         </td>

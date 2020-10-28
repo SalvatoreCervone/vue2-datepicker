@@ -2099,7 +2099,7 @@
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
           }
-        }, [_c('div', [_vm._v(_vm._s(cell.text) + " t")])]);
+        }, [_c('div', [_vm._v(_vm._s(cell.text) + " "), _c('v-badge', [_vm._v("1")])], 1)]);
       })], 2);
     }), 0)]);
   };

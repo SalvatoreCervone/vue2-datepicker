@@ -3578,13 +3578,7 @@ var DatetimePanel = {
       }
     };
     var prefixClass = this.prefixClass;
-    return h("div", [h(__vue_component__$5, helper([{}, calendarProps, {
-      "scopedSlots": {
-        default: function _default(props) {
-          return [h("div", [props.text]), h("div", ["this is real body"])];
-        }
-      }
-    }])), this.timeVisible && h(__vue_component__$9, helper([{
+    return h("div", [h(__vue_component__$5, helper([{}, calendarProps])), this.timeVisible && h(__vue_component__$9, helper([{
       "class": "".concat(prefixClass, "-calendar-time")
     }, timeProps]))]);
   }
@@ -4228,7 +4222,7 @@ var __vue_render__$a = function __vue_render__() {
       input: _vm.handleInputInput,
       change: _vm.handleInputChange
     }
-  }), _vm._v(" "), _vm.showClearIcon ? _c('i', {
+  }), _vm._v(" "), _vm._t("badge"), _vm._v(" "), _vm.showClearIcon ? _c('i', {
     class: _vm.prefixClass + "-icon-clear",
     on: {
       "mousedown": function mousedown($event) {

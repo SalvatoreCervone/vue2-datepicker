@@ -91,15 +91,7 @@ export default {
 
         return (<div>   
                               
-            <CalendarPanel {...calendarProps } scopedSlots={
-    {
-        default: function (props) {
-            return [<div>{props.text}</div>,<div>this is real body</div>]
-        }
-    }}>  
-          
-  
-                </CalendarPanel> 
+            <CalendarPanel {...calendarProps } /> 
             {this.timeVisible && <TimePanel class = { `${prefixClass}-calendar-time` } {...timeProps }/>} 
             </div >
         );

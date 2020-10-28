@@ -51,6 +51,7 @@
           }"
         />
       </slot>
+      <slot name="badge"></slot>
       <i v-if="showClearIcon" :class="`${prefixClass}-icon-clear`" @mousedown.stop="handleClear">
         <slot name="icon-clear">
           <icon-close></icon-close>

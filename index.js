@@ -4046,7 +4046,7 @@
       var prefixClass = this.prefixClass;
       return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
         "slot": "badge"
-      }, [this.$slots.default])]), this.timeVisible && h(__vue_component__$9, helper([{
+      }, [this.$slots.badge])]), this.timeVisible && h(__vue_component__$9, helper([{
         "class": "".concat(prefixClass, "-calendar-time")
       }, timeProps]))]);
     }

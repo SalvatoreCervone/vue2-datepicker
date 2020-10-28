@@ -95,7 +95,7 @@ export default {
 
               <template slot="badge">
               {
-  this.$slots.default 
+  this.$slots.badge 
 }
                   </template>         
                 </CalendarPanel> 

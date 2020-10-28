@@ -97,6 +97,7 @@ export default {
       const year = this.calendarYear;
       const month = this.calendarMonth;
 
+      console.log('mese', month);
       // change to the last day of the last month
       const calendar = createDate(year, month, 0);
       const lastDayInLastMonth = calendar.getDate();

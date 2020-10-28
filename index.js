@@ -2098,7 +2098,7 @@
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
           }
-        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "\n          " + _vm._s(row) + "\n          "), _vm._t("badge", null, {
+        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "           \n          "), _vm._t("badge", null, {
           "row": row
         })], 2)]);
       })], 2);

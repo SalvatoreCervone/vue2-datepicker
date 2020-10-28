@@ -24,8 +24,7 @@
           :title="getCellTitle(cell.day)"
         >
           <div>
-            {{ cell.text }}
-            {{ row }}
+            {{ cell.text }}           
             <slot :row="row" name="badge"></slot>
           </div>
         </td>

@@ -4182,7 +4182,7 @@ var __vue_render__$a = function __vue_render__() {
 
   return _c('div', {
     class: (_obj = {}, _obj[_vm.prefixClass + "-datepicker"] = true, _obj[_vm.prefixClass + "-datepicker-range"] = _vm.range, _obj[_vm.prefixClass + "-datepicker-inline"] = _vm.inline, _obj.disabled = _vm.disabled, _obj)
-  }, [_vm._t("badge"), _vm._v(" "), !_vm.inline ? _c('div', {
+  }, [!_vm.inline ? _c('div', {
     class: _vm.prefixClass + "-input-wrapper",
     on: {
       "mousedown": _vm.openPopup
@@ -4244,7 +4244,7 @@ var __vue_render__$a = function __vue_render__() {
     on: {
       "clickoutside": _vm.handleClickOutSide
     }
-  }, [_vm._t("badge"), _vm._v(" "), _vm.hasSlot('sidebar') || _vm.shortcuts.length ? _c('div', {
+  }, [_vm.hasSlot('sidebar') || _vm.shortcuts.length ? _c('div', {
     class: _vm.prefixClass + "-datepicker-sidebar"
   }, [_vm._t("sidebar", null, {
     "value": _vm.currentValue,
@@ -4271,13 +4271,13 @@ var __vue_render__$a = function __vue_render__() {
     "emit": _vm.emitValue
   })], 2) : _vm._e(), _vm._v(" "), _c('div', {
     class: _vm.prefixClass + "-datepicker-body"
-  }, [_vm._t("content", [_c(_vm.currentComponent, _vm._b({
+  }, [_vm._t("badge"), _vm._v(" "), _vm._t("content", [_c(_vm.currentComponent, _vm._b({
     ref: "picker",
     tag: "component",
     on: {
       "select": _vm.handleSelectDate
     }
-  }, 'component', _vm.currentComponentProps, false))], {
+  }, 'component', _vm.currentComponentProps, false), [_vm._t("badge")], 2)], {
     "value": _vm.currentValue,
     "emit": _vm.emitValue
   })], 2), _vm._v(" "), _vm.hasSlot('footer') || _vm.confirm ? _c('div', {
@@ -4293,7 +4293,7 @@ var __vue_render__$a = function __vue_render__() {
     on: {
       "click": _vm.handleConfirmDate
     }
-  }, [_vm._v("\n          " + _vm._s(_vm.confirmText) + "\n        ")]) : _vm._e()], 2) : _vm._e()])], 2)], 2);
+  }, [_vm._v("\n          " + _vm._s(_vm.confirmText) + "\n        ")]) : _vm._e()], 2) : _vm._e()])])], 1);
 };
 
 var __vue_staticRenderFns__$a = [];

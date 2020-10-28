@@ -7,7 +7,6 @@
       disabled: disabled,
     }"
   >
-    <slot name="badge"></slot>
     <div v-if="!inline" :class="`${prefixClass}-input-wrapper`" @mousedown="openPopup">
       <slot
         name="input"
@@ -73,7 +72,6 @@
       :append-to-body="appendToBody"
       @clickoutside="handleClickOutSide"
     >
-      <slot name="badge"></slot>
       <div
         v-if="hasSlot('sidebar') || shortcuts.length"
         :class="`${prefixClass}-datepicker-sidebar`"
@@ -94,13 +92,16 @@
           <slot name="header" :value="currentValue" :emit="emitValue"></slot>
         </div>
         <div :class="`${prefixClass}-datepicker-body`">
+          <slot name="badge"></slot>
           <slot name="content" :value="currentValue" :emit="emitValue">
             <component
               :is="currentComponent"
               ref="picker"
               v-bind="currentComponentProps"
               @select="handleSelectDate"
-            ></component>
+            >
+              <slot name="badge"></slot>
+            </component>
           </slot>
         </div>
         <div v-if="hasSlot('footer') || confirm" :class="`${prefixClass}-datepicker-footer`">

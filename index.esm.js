@@ -3577,8 +3577,17 @@ var DatetimePanel = {
         'title-click': this.closeTimePanel
       }
     };
+    var slotProps = {
+      props: {
+        row: row
+      }
+    };
     var prefixClass = this.prefixClass;
-    return h("div", ["tttt", h(__vue_component__$5, helper([{}, calendarProps])), this.timeVisible && h(__vue_component__$9, helper([{
+    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("slot", helper([{}, slotProps, {
+      "attrs": {
+        "name": "badge"
+      }
+    }]))]), this.timeVisible && h(__vue_component__$9, helper([{
       "class": "".concat(prefixClass, "-calendar-time")
     }, timeProps]))]);
   }

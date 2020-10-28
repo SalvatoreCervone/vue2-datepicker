@@ -84,11 +84,24 @@ export default {
             },
         };
 
+        const slotProps={
+            props:{
+                row:row
+            }
+        }
+
         const { prefixClass } = this;
 
-        return (<div>
-            tttt
-            <CalendarPanel {...calendarProps }/> 
+        return (<div>            
+            <CalendarPanel {...calendarProps }>
+               
+
+
+          <slot {...slotProps}  name="badge"></slot>
+
+            
+       
+                </CalendarPanel> 
             {this.timeVisible && <TimePanel class = { `${prefixClass}-calendar-time` } {...timeProps }/>} 
             </div >
         );

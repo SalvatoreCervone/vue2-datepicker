@@ -4049,7 +4049,7 @@
         "attrs": {
           "scope": "props"
         }
-      }, [this.$scopedSlots.badge])]), this.timeVisible && h(__vue_component__$9, helper([{
+      }, [this.$slots.badge])]), this.timeVisible && h(__vue_component__$9, helper([{
         "class": "".concat(prefixClass, "-calendar-time")
       }, timeProps]))]);
     }

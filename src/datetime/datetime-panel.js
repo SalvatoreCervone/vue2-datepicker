@@ -93,10 +93,8 @@ export default {
               
                             
             <CalendarPanel {...calendarProps } >
-                <template slot="badge" >
-                {this.$scopedSlots.badge({
-                    row:this.props
-                })}
+                <template slot="badge" scope="props">
+                {this.$scopedSlots.badge}
                 </template>
                     
                 </CalendarPanel> 

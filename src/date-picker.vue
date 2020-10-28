@@ -92,7 +92,6 @@
           <slot name="header" :value="currentValue" :emit="emitValue"></slot>
         </div>
         <div :class="`${prefixClass}-datepicker-body`">
-          <slot name="badge"></slot>
           <slot name="content" :value="currentValue" :emit="emitValue">
             <component
               :is="currentComponent"
@@ -100,7 +99,9 @@
               v-bind="currentComponentProps"
               @select="handleSelectDate"
             >
-              <slot name="badge"></slot>
+              <template v-slot:badge>
+                <slot name="badge"></slot>
+              </template>
             </component>
           </slot>
         </div>

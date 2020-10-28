@@ -4271,13 +4271,20 @@ var __vue_render__$a = function __vue_render__() {
     "emit": _vm.emitValue
   })], 2) : _vm._e(), _vm._v(" "), _c('div', {
     class: _vm.prefixClass + "-datepicker-body"
-  }, [_vm._t("badge"), _vm._v(" "), _vm._t("content", [_c(_vm.currentComponent, _vm._b({
+  }, [_vm._t("content", [_c(_vm.currentComponent, _vm._b({
     ref: "picker",
     tag: "component",
     on: {
       "select": _vm.handleSelectDate
-    }
-  }, 'component', _vm.currentComponentProps, false), [_vm._t("badge")], 2)], {
+    },
+    scopedSlots: _vm._u([{
+      key: "badge",
+      fn: function fn() {
+        return [_vm._t("badge")];
+      },
+      proxy: true
+    }], null, true)
+  }, 'component', _vm.currentComponentProps, false))], {
     "value": _vm.currentValue,
     "emit": _vm.emitValue
   })], 2), _vm._v(" "), _vm.hasSlot('footer') || _vm.confirm ? _c('div', {

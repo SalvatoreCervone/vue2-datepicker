@@ -17,6 +17,7 @@ export default {
             type: Boolean,
             default: undefined,
         },
+       
     },
     data() {
         return {
@@ -93,14 +94,8 @@ export default {
         const { prefixClass } = this;
 
         return (<div>            
-            <CalendarPanel {...calendarProps }>
-               
-
-
-          <slot {...slotProps}  name="badge"></slot>
-
-            
-       
+            <CalendarPanel {...calendarProps }>               
+          <slot name="badge"></slot>
                 </CalendarPanel> 
             {this.timeVisible && <TimePanel class = { `${prefixClass}-calendar-time` } {...timeProps }/>} 
             </div >

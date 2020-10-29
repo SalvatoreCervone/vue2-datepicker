@@ -4175,8 +4175,8 @@
     props: _objectSpread2({
       //CUSOTM
       badgedata: {
-        type: Object,
-        default: {}
+        type: Array,
+        default: []
       }
     }, DatetimePanel.props, {
       value: {},
@@ -4315,9 +4315,6 @@
           value: this.currentValue
         });
 
-        props.push({
-          badgedata: this.badgedata
-        });
         console.log('le tue props', props);
         return props;
       },

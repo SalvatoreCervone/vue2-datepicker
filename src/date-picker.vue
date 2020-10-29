@@ -164,7 +164,7 @@ export default {
   },
   props: {
     //CUSOTM
-    badgedata: { type: Object, default: {} },
+    badgedata: { type: Array, default: [] },
     //FINE CUSTOM
 
     ...DatetimePanel.props,
@@ -305,7 +305,7 @@ export default {
         ...pick(this, Object.keys(this.currentComponent.props)),
         value: this.currentValue,
       };
-      props.push({ badgedata: this.badgedata });
+    
       console.log('le tue props', props);
       return props;
     },

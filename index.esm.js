@@ -1555,11 +1555,16 @@ var script = {
           return r.data == year + "-" + mese + "-" + _i;
         });
 
-        console.log("b", b);
+        var badgetext = "";
+
+        if (b.length > 0) {
+          badgetext = b[0].text;
+        }
+
         arr.push({
           day: _i,
           text: _i,
-          badge: b.text
+          badge: badgetext
         });
       };
 

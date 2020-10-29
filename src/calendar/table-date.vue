@@ -122,8 +122,11 @@ let b=this.badgedata.filter(r=>{
  
   return r.data==year + "-"+mese+"-"+i;
 });
- console.log("b",b)
-        arr.push({ day: i, text: i ,badge:b.text});
+let badgetext=""
+ if(b.length>0){
+badgetext=b[0].text;
+ }
+        arr.push({ day: i, text: i ,badge:badgetext});
       }
 
       const lastMonthLength = lastDayInLastMonth - firstDayInLastMonth + 1;

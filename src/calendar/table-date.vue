@@ -25,7 +25,8 @@
         >
           <div>
             {{ cell.text }}
-            <v-badge v-if="cell.badge"> {{ cell.badge }} </v-badge>
+            <v-badge bordered color="error" overlap :content="cell.badge" v-if="cell.badge">
+            </v-badge>
           </div>
         </td>
       </tr>

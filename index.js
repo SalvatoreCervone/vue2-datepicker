@@ -2123,7 +2123,14 @@
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
           }
-        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "\n          "), cell.badge ? _c('v-badge', [_vm._v(" " + _vm._s(cell.badge) + " ")]) : _vm._e()], 1)]);
+        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "\n          "), cell.badge ? _c('v-badge', {
+          attrs: {
+            "bordered": "",
+            "color": "error",
+            "overlap": "",
+            "content": cell.badge
+          }
+        }) : _vm._e()], 1)]);
       })], 2);
     }), 0)]);
   };

@@ -54,7 +54,7 @@ export default {
     },
   },
   props: {
-    badgedata:{type:Array,default:[]},
+    badgedata:{type:Array,default(){return []}},
     calendarYear: {
       type: Number,
       default() {
@@ -116,10 +116,12 @@ export default {
       calendar.setMonth(month + 1, 0);
       const lastDayInCurrentMonth = calendar.getDate();
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
+        console.log('badgedata',this.badgedata)
 let b=this.badgedata.filter(r=>{
+  console.log("r",r,year + "-"+ month+"-"+i)
   return r['data']==year + "-"+ month+"-"+i;
 });
-console.log(b)
+
         arr.push({ day: i, text: i ,badge:b.text});
       }
 

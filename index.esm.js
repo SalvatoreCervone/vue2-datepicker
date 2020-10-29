@@ -1477,7 +1477,9 @@ var script = {
   props: {
     badgedata: {
       type: Array,
-      default: []
+      default: function _default() {
+        return [];
+      }
     },
     calendarYear: {
       type: Number,
@@ -1546,11 +1548,13 @@ var script = {
       var lastDayInCurrentMonth = calendar.getDate();
 
       var _loop = function _loop(_i) {
+        console.log('badgedata', _this.badgedata);
+
         var b = _this.badgedata.filter(function (r) {
+          console.log("r", r, year + "-" + month + "-" + _i);
           return r['data'] == year + "-" + month + "-" + _i;
         });
 
-        console.log(b);
         arr.push({
           day: _i,
           text: _i,

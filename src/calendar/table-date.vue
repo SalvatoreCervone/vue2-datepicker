@@ -22,6 +22,7 @@
           class="cell"
           :class="getCellClasses(cell.day)"
           :title="getCellTitle(cell.day)"
+          @click="tdclick"
         >
           <div>
             <template v-if="cell.badge">
@@ -159,6 +160,12 @@ export default {
       if (target.tagName === 'DIV') {
         target = target.parentNode;
       }
+      const day = target.getAttribute('data-day');
+      if (day) {
+        this.$emit('select', parseInt(day, 10));
+      }
+    },
+    tdclick() {
       const day = target.getAttribute('data-day');
       if (day) {
         this.$emit('select', parseInt(day, 10));

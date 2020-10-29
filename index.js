@@ -2071,6 +2071,13 @@
           this.$emit('select', parseInt(day, 10));
         }
       },
+      tdclick: function tdclick() {
+        var day = target.getAttribute('data-day');
+
+        if (day) {
+          this.$emit('select', parseInt(day, 10));
+        }
+      },
       getCellTitle: function getCellTitle(day) {
         var year = this.calendarYear;
         var month = this.calendarMonth;
@@ -2124,6 +2131,9 @@
           attrs: {
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
+          },
+          on: {
+            "click": _vm.tdclick
           }
         }, [_c('div', [cell.badge ? [_c('v-badge', {
           attrs: {

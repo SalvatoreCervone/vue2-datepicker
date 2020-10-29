@@ -25,7 +25,7 @@
         >
           <div>
             {{ cell.text }}           
-            <slot :row="row" name="badge"></slot>
+            <!-- <slot :row="row" name="badge"></slot> -->
             <v-badge><v-badge>
           </div>
         </td>

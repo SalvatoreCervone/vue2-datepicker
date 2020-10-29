@@ -2098,9 +2098,7 @@
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
           }
-        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "           \n          "), _vm._t("badge", null, {
-          "row": row
-        }), _vm._v(" "), _c('v-badge', [_c('v-badge')], 1)], 2)]);
+        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "           \n          "), _vm._v(" "), _c('v-badge', [_c('v-badge')], 1)], 1)]);
       })], 2);
     }), 0)]);
   };
@@ -2809,16 +2807,7 @@
       },
       on: {
         "select": _vm.handleSelectDate
-      },
-      scopedSlots: _vm._u([{
-        key: "badge",
-        fn: function fn(ref) {
-          var row = ref.row;
-          return [_vm._t("badge", null, {
-            "row": row
-          })];
-        }
-      }], null, true)
+      }
     }) : _vm._e()], 1)]);
   };
 
@@ -4315,6 +4304,7 @@
           value: this.currentValue
         });
 
+        props.badgedata = this.badgedata;
         console.log('le tue props', props);
         return props;
       },

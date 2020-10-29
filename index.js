@@ -2017,10 +2017,10 @@
           var mese = month + 1;
 
           var b = _this.badgedata.filter(function (r) {
-            return r.data == year + "-" + mese + "-" + _i;
+            return r.data == year + '-' + mese + '-' + _i;
           });
 
-          var badgetext = "";
+          var badgetext = '';
 
           if (b.length > 0) {
             badgetext = b[0].text;
@@ -2123,7 +2123,7 @@
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
           }
-        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "                     \n          "), cell.badge ? _c('v-badge', [_vm._v(" " + _vm._s(cell.badge) + "  "), _c('v-badge')], 1) : _vm._e()], 1)]);
+        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "\n          "), cell.badge ? _c('v-badge', [_vm._v(" " + _vm._s(cell.badge) + " ")]) : _vm._e()], 1)]);
       })], 2);
     }), 0)]);
   };

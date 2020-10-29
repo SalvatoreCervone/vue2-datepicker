@@ -24,8 +24,8 @@
           :title="getCellTitle(cell.day)"
         >
           <div>
-            {{ cell.text }}                     
-            <v-badge v-if="cell.badge"> {{ cell.badge }}  <v-badge>
+            {{ cell.text }}
+            <v-badge v-if="cell.badge"> {{ cell.badge }} </v-badge>
           </div>
         </td>
       </tr>
@@ -53,7 +53,12 @@ export default {
     },
   },
   props: {
-    badgedata:{type:Array,default(){return []}},
+    badgedata: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
     calendarYear: {
       type: Number,
       default() {
@@ -114,20 +119,18 @@ export default {
       // change to the last day of the current month
       calendar.setMonth(month + 1, 0);
       const lastDayInCurrentMonth = calendar.getDate();
-     
-      for (let i = 1; i <= lastDayInCurrentMonth; i++) {
 
-       let mese=month+1
-        let b=this.badgedata.filter(r=>{
-        
-          return r.data==year + "-"+mese+"-"+i;
+      for (let i = 1; i <= lastDayInCurrentMonth; i++) {
+        let mese = month + 1;
+        let b = this.badgedata.filter(r => {
+          return r.data == year + '-' + mese + '-' + i;
         });
 
-        let badgetext=""
-        if(b.length>0){
-           badgetext=b[0].text;
+        let badgetext = '';
+        if (b.length > 0) {
+          badgetext = b[0].text;
         }
-        arr.push({ day: i, text: i ,badge:badgetext});
+        arr.push({ day: i, text: i, badge: badgetext });
       }
 
       const lastMonthLength = lastDayInLastMonth - firstDayInLastMonth + 1;

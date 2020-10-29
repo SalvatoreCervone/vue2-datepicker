@@ -2071,7 +2071,8 @@
           this.$emit('select', parseInt(day, 10));
         }
       },
-      tdclick: function tdclick() {
+      tdclick: function tdclick(evt) {
+        var target = evt.target;
         var day = target.getAttribute('data-day');
 
         if (day) {

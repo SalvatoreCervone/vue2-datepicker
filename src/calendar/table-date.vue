@@ -165,7 +165,8 @@ export default {
         this.$emit('select', parseInt(day, 10));
       }
     },
-    tdclick() {
+    tdclick(evt) {
+      let { target } = evt;
       const day = target.getAttribute('data-day');
       if (day) {
         this.$emit('select', parseInt(day, 10));

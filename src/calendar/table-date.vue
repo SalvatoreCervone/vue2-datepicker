@@ -24,7 +24,7 @@
           :title="getCellTitle(cell.day)"
           @click="tdclick"
         >
-          <div>
+          <div @click="tdclick" :data-day="cell.day">
             <template v-if="cell.badge">
               <v-badge offset-x="5" offset-y="5" color="error" :content="cell.badge">
                 {{ cell.text }}

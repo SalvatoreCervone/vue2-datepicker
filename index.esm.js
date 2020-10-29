@@ -1670,7 +1670,14 @@ var __vue_render__$2 = function __vue_render__() {
         on: {
           "click": _vm.tdclick
         }
-      }, [_c('div', [cell.badge ? [_c('v-badge', {
+      }, [_c('div', {
+        attrs: {
+          "data-day": cell.day
+        },
+        on: {
+          "click": _vm.tdclick
+        }
+      }, [cell.badge ? [_c('v-badge', {
         attrs: {
           "offset-x": "5",
           "offset-y": "5",

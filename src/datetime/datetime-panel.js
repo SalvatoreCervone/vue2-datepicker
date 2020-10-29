@@ -92,15 +92,7 @@ export default {
         return (<div>   
               
                             
-            <CalendarPanel {...calendarProps } >
-                {/* <template slot="badge">
-                    
-                {this.$scopedSlots.badge({
-                    row:this
-                })}
-                </template> */}
-                    
-                </CalendarPanel> 
+            <CalendarPanel {...calendarProps } /> 
             {this.timeVisible && <TimePanel class = { `${prefixClass}-calendar-time` } {...timeProps }/>} 
             </div >
         );

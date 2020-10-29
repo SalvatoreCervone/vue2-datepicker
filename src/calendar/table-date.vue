@@ -24,8 +24,7 @@
           :title="getCellTitle(cell.day)"
         >
           <div>
-            {{ cell.text }}           
-            <!-- <slot :row="row" name="badge"></slot> -->
+            {{ cell.text }}                     
             <v-badge v-if="cell.badge"> {{ cell.badge }}  <v-badge>
           </div>
         </td>
@@ -115,17 +114,19 @@ export default {
       // change to the last day of the current month
       calendar.setMonth(month + 1, 0);
       const lastDayInCurrentMonth = calendar.getDate();
-       console.log('badgedata',this.badgedata)
+     
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
+
        let mese=month+1
-let b=this.badgedata.filter(r=>{
- 
-  return r.data==year + "-"+mese+"-"+i;
-});
-let badgetext=""
- if(b.length>0){
-badgetext=b[0].text;
- }
+        let b=this.badgedata.filter(r=>{
+        
+          return r.data==year + "-"+mese+"-"+i;
+        });
+
+        let badgetext=""
+        if(b.length>0){
+           badgetext=b[0].text;
+        }
         arr.push({ day: i, text: i ,badge:badgetext});
       }
 

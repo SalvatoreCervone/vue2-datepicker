@@ -1546,7 +1546,6 @@ var script = {
 
       calendar.setMonth(month + 1, 0);
       var lastDayInCurrentMonth = calendar.getDate();
-      console.log('badgedata', this.badgedata);
 
       var _loop = function _loop(_i) {
         var mese = month + 1;
@@ -1658,7 +1657,7 @@ var __vue_render__$2 = function __vue_render__() {
           "data-day": cell.day,
           "title": _vm.getCellTitle(cell.day)
         }
-      }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "           \n          "), _vm._v(" "), cell.badge ? _c('v-badge', [_vm._v(" " + _vm._s(cell.badge) + "  "), _c('v-badge')], 1) : _vm._e()], 1)]);
+      }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "                     \n          "), cell.badge ? _c('v-badge', [_vm._v(" " + _vm._s(cell.badge) + "  "), _c('v-badge')], 1) : _vm._e()], 1)]);
     })], 2);
   }), 0)]);
 };

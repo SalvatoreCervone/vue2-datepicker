@@ -23,16 +23,16 @@
           :class="getCellClasses(cell.day)"
           :title="getCellTitle(cell.day)"
         >
-          <template v-if="cell.badge">
-            <v-badge offset-x="5" offset-y="5" color="error" :content="cell.badge">
+          <div>
+            <template v-if="cell.badge">
+              <v-badge offset-x="5" offset-y="5" color="error" :content="cell.badge">
+                {{ cell.text }}
+              </v-badge>
+            </template>
+            <template v-else>
               {{ cell.text }}
-            </v-badge>
-          </template>
-          <template v-else>
-            <div>
-              {{ cell.text }}
-            </div>
-          </template>
+            </template>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -127,6 +127,7 @@ export default {
       const lastDayInCurrentMonth = calendar.getDate();
 
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
+        //CUSTOM
         let mese = month + 1;
         let b = this.badgedata.filter(r => {
           return r.data == year + '-' + mese + '-' + i;
@@ -136,6 +137,7 @@ export default {
         if (b.length > 0) {
           badgetext = b[0].text;
         }
+        //FINE CUSTOM
         arr.push({ day: i, text: i, badge: badgetext });
       }
 

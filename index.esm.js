@@ -1548,6 +1548,7 @@ var script = {
       var lastDayInCurrentMonth = calendar.getDate();
 
       var _loop = function _loop(_i) {
+        //CUSTOM
         var mese = month + 1;
 
         var b = _this.badgedata.filter(function (r) {
@@ -1558,7 +1559,8 @@ var script = {
 
         if (b.length > 0) {
           badgetext = b[0].text;
-        }
+        } //FINE CUSTOM
+
 
         arr.push({
           day: _i,
@@ -1657,14 +1659,14 @@ var __vue_render__$2 = function __vue_render__() {
           "data-day": cell.day,
           "title": _vm.getCellTitle(cell.day)
         }
-      }, [cell.badge ? [_c('v-badge', {
+      }, [_c('div', [cell.badge ? [_c('v-badge', {
         attrs: {
           "offset-x": "5",
           "offset-y": "5",
           "color": "error",
           "content": cell.badge
         }
-      }, [_vm._v("\n            " + _vm._s(cell.text) + "\n          ")])] : [_c('div', [_vm._v("\n            " + _vm._s(cell.text) + "\n          ")])]], 2);
+      }, [_vm._v("\n              " + _vm._s(cell.text) + "\n            ")])] : [_vm._v("\n            " + _vm._s(cell.text) + "\n          ")]], 2)]);
     })], 2);
   }), 0)]);
 };

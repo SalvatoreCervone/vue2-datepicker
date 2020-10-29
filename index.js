@@ -2125,6 +2125,8 @@
           }
         }, [cell.badge ? [_c('v-badge', {
           attrs: {
+            "offset-x": "5",
+            "offset-y": "5",
             "color": "error",
             "overlap": "",
             "content": cell.badge

@@ -24,7 +24,7 @@
           :title="getCellTitle(cell.day)"
         >
           <template v-if="cell.badge">
-            <v-badge color="error" overlap :content="cell.badge">
+            <v-badge offset-x="5" offset-y="5" color="error" overlap :content="cell.badge">
               {{ cell.text }}
             </v-badge>
           </template>

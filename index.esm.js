@@ -1659,6 +1659,8 @@ var __vue_render__$2 = function __vue_render__() {
         }
       }, [cell.badge ? [_c('v-badge', {
         attrs: {
+          "offset-x": "5",
+          "offset-y": "5",
           "color": "error",
           "overlap": "",
           "content": cell.badge

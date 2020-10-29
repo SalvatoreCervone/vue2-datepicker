@@ -99,10 +99,10 @@
               v-bind="currentComponentProps"
               @select="handleSelectDate"
             >
-              <template v-slot:badge="{ row }">
-                {{row}}
+              <!-- <template v-slot:badge="{ row }">
+                {{ row }}
                 <slot :row="row" name="badge"></slot>
-              </template>
+              </template> -->
             </component>
           </slot>
         </div>
@@ -163,6 +163,10 @@ export default {
     };
   },
   props: {
+    //CUSOTM
+    badgedata: { type: Object, default: {} },
+    //FINE CUSTOM
+
     ...DatetimePanel.props,
     value: {},
     valueType: {
@@ -301,6 +305,8 @@ export default {
         ...pick(this, Object.keys(this.currentComponent.props)),
         value: this.currentValue,
       };
+      props.push({ badgedata: this.badgedata });
+      console.log('le tue props', props);
       return props;
     },
     popupVisible() {

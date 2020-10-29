@@ -1634,7 +1634,7 @@ var __vue_render__$2 = function __vue_render__() {
         }
       }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "           \n          "), _vm._t("badge", null, {
         "row": row
-      })], 2)]);
+      }), _vm._v(" "), _c('v-badge', [_c('v-badge')], 1)], 2)]);
     })], 2);
   }), 0)]);
 };
@@ -3578,11 +3578,7 @@ var DatetimePanel = {
       }
     };
     var prefixClass = this.prefixClass;
-    return h("div", [h(__vue_component__$5, helper([{}, calendarProps]), [h("template", {
-      "slot": "badge"
-    }, [this.$scopedSlots.badge({
-      row: this
-    })])]), this.timeVisible && h(__vue_component__$9, helper([{
+    return h("div", [h(__vue_component__$5, helper([{}, calendarProps])), this.timeVisible && h(__vue_component__$9, helper([{
       "class": "".concat(prefixClass, "-calendar-time")
     }, timeProps]))]);
   }
@@ -3710,7 +3706,13 @@ var script$8 = {
       prefixClass: this.prefixClass
     };
   },
-  props: _objectSpread2({}, DatetimePanel.props, {
+  props: _objectSpread2({
+    //CUSOTM
+    badgedata: {
+      type: Object,
+      default: {}
+    }
+  }, DatetimePanel.props, {
     value: {},
     valueType: {
       type: String,
@@ -3847,6 +3849,10 @@ var script$8 = {
         value: this.currentValue
       });
 
+      props.push({
+        badgedata: this.badgedata
+      });
+      console.log('le tue props', props);
       return props;
     },
     popupVisible: function popupVisible() {
@@ -4280,16 +4286,7 @@ var __vue_render__$a = function __vue_render__() {
     tag: "component",
     on: {
       "select": _vm.handleSelectDate
-    },
-    scopedSlots: _vm._u([{
-      key: "badge",
-      fn: function fn(ref) {
-        var row = ref.row;
-        return [_vm._v("\n              " + _vm._s(row) + "\n              "), _vm._t("badge", null, {
-          "row": row
-        })];
-      }
-    }], null, true)
+    }
   }, 'component', _vm.currentComponentProps, false))], {
     "value": _vm.currentValue,
     "emit": _vm.emitValue

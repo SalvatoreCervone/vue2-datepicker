@@ -119,10 +119,10 @@ export default {
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
        let mese=month+1
 let b=this.badgedata.filter(r=>{
-  console.log("r",r,year + "-"+ mese+"-"+i)
-  return r['data']==year + "-"+mese+"-"+i;
+ 
+  return r.data==year + "-"+mese+"-"+i;
 });
-
+ console.log("b",b)
         arr.push({ day: i, text: i ,badge:b.text});
       }
 

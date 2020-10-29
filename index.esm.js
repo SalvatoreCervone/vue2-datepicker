@@ -1552,10 +1552,10 @@ var script = {
         var mese = month + 1;
 
         var b = _this.badgedata.filter(function (r) {
-          console.log("r", r, year + "-" + mese + "-" + _i);
-          return r['data'] == year + "-" + mese + "-" + _i;
+          return r.data == year + "-" + mese + "-" + _i;
         });
 
+        console.log("b", b);
         arr.push({
           day: _i,
           text: _i,

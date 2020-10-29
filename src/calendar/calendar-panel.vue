@@ -90,6 +90,7 @@
         :show-week-number="typeof showWeekNumber === 'boolean' ? showWeekNumber : type === 'week'"
         :get-cell-classes="getDateClasses"
         :get-row-classes="getWeekState"
+        :badgedata="badgedata"
         @select="handleSelectDate"
       >
         <!-- <template v-slot:badge="{ row }">

@@ -1941,6 +1941,10 @@
       }
     },
     props: {
+      badgedata: {
+        type: Array,
+        default: []
+      },
       calendarYear: {
         type: Number,
         default: function _default() {
@@ -1983,6 +1987,8 @@
         return days.concat(days).slice(this.firstDayOfWeek, this.firstDayOfWeek + 7);
       },
       dates: function dates() {
+        var _this = this;
+
         var arr = [];
         var firstDayOfWeek = this.firstDayOfWeek;
         var year = this.calendarYear;
@@ -2005,11 +2011,21 @@
         calendar.setMonth(month + 1, 0);
         var lastDayInCurrentMonth = calendar.getDate();
 
-        for (var _i = 1; _i <= lastDayInCurrentMonth; _i++) {
+        var _loop = function _loop(_i) {
+          var b = _this.badgedata.filter(function (r) {
+            return r['data'] == year + "-" + month + "-" + _i;
+          });
+
+          console.log(b);
           arr.push({
             day: _i,
-            text: _i
+            text: _i,
+            badge: b.text
           });
+        };
+
+        for (var _i = 1; _i <= lastDayInCurrentMonth; _i++) {
+          _loop(_i);
         }
 
         var lastMonthLength = lastDayInLastMonth - firstDayInLastMonth + 1;
@@ -2098,7 +2114,7 @@
             "data-day": cell.day,
             "title": _vm.getCellTitle(cell.day)
           }
-        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "           \n          "), _vm._v(" "), _c('v-badge', [_c('v-badge')], 1)], 1)]);
+        }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "           \n          "), _vm._v(" "), cell.badge ? _c('v-badge', [_vm._v(" " + _vm._s(cell.badge) + "  "), _c('v-badge')], 1) : _vm._e()], 1)]);
       })], 2);
     }), 0)]);
   };
@@ -2803,7 +2819,8 @@
         "title-format": _vm.titleFormat,
         "show-week-number": typeof _vm.showWeekNumber === 'boolean' ? _vm.showWeekNumber : _vm.type === 'week',
         "get-cell-classes": _vm.getDateClasses,
-        "get-row-classes": _vm.getWeekState
+        "get-row-classes": _vm.getWeekState,
+        "badgedata": _vm.badgedata
       },
       on: {
         "select": _vm.handleSelectDate

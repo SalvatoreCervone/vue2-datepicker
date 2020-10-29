@@ -99,10 +99,7 @@
               v-bind="currentComponentProps"
               @select="handleSelectDate"
             >
-              <!-- <template v-slot:badge="{ row }">
-                {{ row }}
-                <slot :row="row" name="badge"></slot>
-              </template> -->
+            
             </component>
           </slot>
         </div>

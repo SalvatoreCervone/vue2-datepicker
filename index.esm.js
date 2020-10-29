@@ -1657,13 +1657,13 @@ var __vue_render__$2 = function __vue_render__() {
           "data-day": cell.day,
           "title": _vm.getCellTitle(cell.day)
         }
-      }, [_c('div', [_vm._v("\n          " + _vm._s(cell.text) + "\n        ")]), _vm._v(" "), cell.badge ? _c('v-badge', {
+      }, [cell.badge ? [_c('v-badge', {
         attrs: {
           "color": "error",
           "overlap": "",
           "content": cell.badge
         }
-      }) : _vm._e()], 1);
+      }, [_vm._v("\n            " + _vm._s(cell.text) + "\n          ")])] : [_c('div', [_vm._v("\n            " + _vm._s(cell.text) + "\n          ")])]], 2);
     })], 2);
   }), 0)]);
 };

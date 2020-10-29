@@ -23,10 +23,16 @@
           :class="getCellClasses(cell.day)"
           :title="getCellTitle(cell.day)"
         >
-          <div>
-            {{ cell.text }}
-          </div>
-          <v-badge color="error" overlap :content="cell.badge" v-if="cell.badge"> </v-badge>
+          <template v-if="cell.badge">
+            <v-badge color="error" overlap :content="cell.badge">
+              {{ cell.text }}
+            </v-badge>
+          </template>
+          <template v-else>
+            <div>
+              {{ cell.text }}
+            </div>
+          </template>
         </td>
       </tr>
     </tbody>

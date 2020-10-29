@@ -2012,10 +2012,9 @@
 
         calendar.setMonth(month + 1, 0);
         var lastDayInCurrentMonth = calendar.getDate();
+        console.log('badgedata', this.badgedata);
 
         var _loop = function _loop(_i) {
-          console.log('badgedata', _this.badgedata);
-
           var b = _this.badgedata.filter(function (r) {
             console.log("r", r, year + "-" + month + "-" + _i);
             return r['data'] == year + "-" + month + "-" + _i;
@@ -2402,6 +2401,10 @@
       }
     },
     props: {
+      badgedata: {
+        type: Array,
+        default: []
+      },
       value: {},
       defaultValue: {
         default: function _default() {

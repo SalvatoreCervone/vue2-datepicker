@@ -115,8 +115,9 @@ export default {
       // change to the last day of the current month
       calendar.setMonth(month + 1, 0);
       const lastDayInCurrentMonth = calendar.getDate();
+       console.log('badgedata',this.badgedata)
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
-        console.log('badgedata',this.badgedata)
+       
 let b=this.badgedata.filter(r=>{
   console.log("r",r,year + "-"+ month+"-"+i)
   return r['data']==year + "-"+ month+"-"+i;

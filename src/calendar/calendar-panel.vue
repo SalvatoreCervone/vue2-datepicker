@@ -139,6 +139,7 @@ export default {
     },
   },
   props: {
+    badgedata: { type: Array, default: [] },
     value: {},
     defaultValue: {
       default() {

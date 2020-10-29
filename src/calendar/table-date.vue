@@ -117,10 +117,10 @@ export default {
       const lastDayInCurrentMonth = calendar.getDate();
        console.log('badgedata',this.badgedata)
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
-       let mese=month+1;
+       let mese=month+1
 let b=this.badgedata.filter(r=>{
   console.log("r",r,year + "-"+ mese+"-"+i)
-  return r['data']==year + "-"+ mese+"-"+i;
+  return r['data']==year + "-"+mese+"-"+i;
 });
 
         arr.push({ day: i, text: i ,badge:b.text});
@@ -128,7 +128,7 @@ let b=this.badgedata.filter(r=>{
 
       const lastMonthLength = lastDayInLastMonth - firstDayInLastMonth + 1;
       const nextMonthLength = 6 * 7 - lastMonthLength - lastDayInCurrentMonth;
-      for (let i = 1; i <= ; i++) {
+      for (let i = 1; i <= nextMonthLength; i++) {
         arr.push({ day: lastDayInCurrentMonth + i, text: i });
       }
 

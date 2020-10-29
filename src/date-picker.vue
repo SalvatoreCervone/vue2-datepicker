@@ -302,8 +302,7 @@ export default {
         ...pick(this, Object.keys(this.currentComponent.props)),
         value: this.currentValue,
       };
-      props.badgedata = this.badgedata;
-      console.log('le tue props', props);
+      props.badgedata = this.badgedata;     
       return props;
     },
     popupVisible() {

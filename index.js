@@ -2128,7 +2128,6 @@
             "offset-x": "5",
             "offset-y": "5",
             "color": "error",
-            "overlap": "",
             "content": cell.badge
           }
         }, [_vm._v("\n            " + _vm._s(cell.text) + "\n          ")])] : [_c('div', [_vm._v("\n            " + _vm._s(cell.text) + "\n          ")])]], 2);
@@ -4343,7 +4342,6 @@
         });
 
         props.badgedata = this.badgedata;
-        console.log('le tue props', props);
         return props;
       },
       popupVisible: function popupVisible() {

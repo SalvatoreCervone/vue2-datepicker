@@ -26,7 +26,14 @@
         >
           <div @click="tdclick" :data-day="cell.day">
             <template v-if="cell.badge">
-              <v-badge offset-x="5" offset-y="5" color="error" :content="cell.badge">
+              <v-badge
+                @click="tdclick"
+                :data-day="cell.day"
+                offset-x="5"
+                offset-y="5"
+                color="error"
+                :content="cell.badge"
+              >
                 {{ cell.text }}
               </v-badge>
             </template>
@@ -166,6 +173,7 @@ export default {
       }
     },
     tdclick(evt) {
+      console.log('evt', evt);
       let { target } = evt;
       const day = target.getAttribute('data-day');
       if (day) {

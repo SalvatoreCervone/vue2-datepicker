@@ -2072,6 +2072,7 @@
         }
       },
       tdclick: function tdclick(evt) {
+        console.log('evt', evt);
         var target = evt.target;
         var day = target.getAttribute('data-day');
 
@@ -2145,10 +2146,14 @@
           }
         }, [cell.badge ? [_c('v-badge', {
           attrs: {
+            "data-day": cell.day,
             "offset-x": "5",
             "offset-y": "5",
             "color": "error",
             "content": cell.badge
+          },
+          on: {
+            "click": _vm.tdclick
           }
         }, [_vm._v("\n              " + _vm._s(cell.text) + "\n            ")])] : [_vm._v("\n            " + _vm._s(cell.text) + "\n          ")]], 2)]);
       })], 2);

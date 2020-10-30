@@ -2072,7 +2072,6 @@
         }
       },
       tdclick: function tdclick(evt) {
-        console.log('evt', evt);
         var target = evt.target;
         var day = target.getAttribute('data-day');
 

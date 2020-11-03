@@ -2440,7 +2440,9 @@
     props: {
       badgedata: {
         type: Array,
-        default: []
+        default: function _default() {
+          return [];
+        }
       },
       value: {},
       defaultValue: {
@@ -4226,7 +4228,9 @@
       //CUSOTM
       badgedata: {
         type: Array,
-        default: []
+        default: function _default() {
+          return [];
+        }
       }
     }, DatetimePanel.props, {
       value: {},

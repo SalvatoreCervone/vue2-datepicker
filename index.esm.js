@@ -1974,7 +1974,9 @@ var script$3 = {
   props: {
     badgedata: {
       type: Array,
-      default: []
+      default: function _default() {
+        return [];
+      }
     },
     value: {},
     defaultValue: {
@@ -3760,7 +3762,9 @@ var script$8 = {
     //CUSOTM
     badgedata: {
       type: Array,
-      default: []
+      default: function _default() {
+        return [];
+      }
     }
   }, DatetimePanel.props, {
     value: {},

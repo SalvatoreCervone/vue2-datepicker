@@ -99,7 +99,6 @@
               v-bind="currentComponentProps"
               @select="handleSelectDate"
             >
-            
             </component>
           </slot>
         </div>
@@ -161,7 +160,12 @@ export default {
   },
   props: {
     //CUSOTM
-    badgedata: { type: Array, default: [] },
+    badgedata: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
     //FINE CUSTOM
 
     ...DatetimePanel.props,
@@ -302,7 +306,7 @@ export default {
         ...pick(this, Object.keys(this.currentComponent.props)),
         value: this.currentValue,
       };
-      props.badgedata = this.badgedata;     
+      props.badgedata = this.badgedata;
       return props;
     },
     popupVisible() {

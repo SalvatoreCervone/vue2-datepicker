@@ -173,7 +173,6 @@ export default {
       }
     },
     tdclick(evt) {
-     
       let { target } = evt;
       const day = target.getAttribute('data-day');
       if (day) {

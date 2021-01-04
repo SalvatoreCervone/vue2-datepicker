@@ -137,7 +137,7 @@ export default {
       for (let i = 1; i <= lastDayInCurrentMonth; i++) {
         //CUSTOM
         let mese = month + 1;
-        console.log(mese);
+        if (mese < 10) mese = '0' + mese;
         let b = this.badgedata.filter(r => {
           return r.data == year + '-' + mese + '-' + i;
         });

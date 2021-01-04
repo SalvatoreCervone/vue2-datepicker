@@ -1550,7 +1550,7 @@ var script = {
       var _loop = function _loop(_i) {
         //CUSTOM
         var mese = month + 1;
-        console.log(mese);
+        if (mese < 10) mese = '0' + mese;
 
         var b = _this.badgedata.filter(function (r) {
           return r.data == year + '-' + mese + '-' + _i;
